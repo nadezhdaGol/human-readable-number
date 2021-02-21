@@ -15,7 +15,7 @@ module.exports = function toReadable (number) {
         return dozens[number / 10 - 1];
     } else if (number > 20 && number < 100 && number % 10 !== 0) {
         return dozens[Math.floor(number / 10) - 1] + ' ' + numbers[number % 10];
-    } else if (number > 100 && ost > 0.01 && ost < 0.1 && number % 10 !== 0) {
+    } else if (number > 100 && ost > 0 && ost < 0.1 && number % 10 !== 0) {
         return numbers[numH] + ' ' + hundreds[0] + ' ' + numbers[number % 100];
     } else if (number > 100 && ost > 0.1 && ost < 0.2 && number % 10 !== 0) {
         return numbers[numH] + ' ' + hundreds[0] + ' ' + secDozens[number % 100 - 11];
